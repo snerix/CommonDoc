@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="健康AI记技术支持">
+  <title>技术支持 - 健康AI记</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#167c80; --card:#f4f7f7; --warn:#fff4da; --border:#d9e2e2; --muted:#667575; }
+    @media (prefers-color-scheme:dark) { :root { --card:#172323; --warn:#372f19; --border:#334545; --muted:#a5b5b5; } }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif; line-height:1.75; }
+    main { max-width:860px; margin:0 auto; padding:36px 22px 72px; }
+    nav { margin-bottom:24px; }
+    nav a, a { color:var(--accent); }
+    h1 { margin:0 0 4px; font-size:2rem; }
+    h2 { margin-top:40px; padding-bottom:7px; border-bottom:1px solid var(--border); font-size:1.3rem; }
+    .meta { color:var(--muted); margin:0 0 24px; }
+    .faq { background:var(--card); border-left:4px solid var(--accent); border-radius:10px; padding:16px 18px; margin:16px 0; }
+    .faq h3 { margin:0 0 8px; color:var(--accent); font-size:1.08rem; }
+    .warning { background:var(--warn); border-left:4px solid #d89b22; border-radius:10px; padding:16px 18px; margin:18px 0; }
+    footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--border); color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="index.html">← 返回文档首页</a></nav>
+    <h1>健康AI记技术支持</h1>
+    <p class="meta">健康指标、化验报告和检查报告记录工具</p>
+
+    <div class="warning"><strong>医疗提示：</strong>健康AI记只用于记录、整理和展示数据，不提供诊断、医学影像解读、结果解释或治疗建议。急性不适或医疗疑问请及时联系医生或医疗机构。</div>
+
+    <h2>常见问题</h2>
+
+    <div class="faq">
+      <h3>健康AI记可以记录什么？</h3>
+      <p>您可以手动记录血压、血糖、体重等身体指标，也可以导入化验单、体检报告及医生已经出具文字结论的 CT、核磁、B 超、X 线、内镜和病理检查报告。App 会按人员分别保存报告，并展示指标的历史记录和变化趋势。</p>
+    </div>
+
+    <div class="faq">
+      <h3>可以分析 CT、X 光片或 B 超图像吗？</h3>
+      <p>不可以。App 会跳过 X 光片、CT/MRI 切片、B 超图像、内镜图像、病理切片等原始医学影像，只转录报告中医生已经写明的文字所见和结论。</p>
+    </div>
+
+    <div class="faq">
+      <h3>为什么识别前需要 DeepSeek API Key？</h3>
+      <p>报告识别使用用户自己的 DeepSeek API 账户。API Key 仅保存在系统安全存储中，相关调用费用、账户记录和配额由该账户承担。不开启云端识别时，您仍可手动录入指标。</p>
+    </div>
+
+    <div class="faq">
+      <h3>报告会上传到哪里？</h3>
+      <p>只有在您同意并主动识别时，所选照片才会通过 HTTPS 直接发送给 DeepSeek API；PDF 会先在本机转换为页面图片。健康AI记没有自建图片中转服务器。详情请阅读<a href="health_ai_note_privacy.html">隐私政策</a>。</p>
+    </div>
+
+    <div class="faq">
+      <h3>图片清楚但仍然没有完整识别怎么办？</h3>
+      <ol>
+        <li>确认报告文字完整进入画面，避免反光、阴影和倾斜。</li>
+        <li>尽量裁掉无关桌面背景，让正文占据更多画面。</li>
+        <li>同一份多页报告可以按页顺序一次选择。</li>
+        <li>保存前逐项核对指标、单位、日期、检查所见和结论。</li>
+      </ol>
+      <p>若页面是出院小结、病历或处方，当前可能只能识别文书类型，而不能结构化录入。</p>
+    </div>
+
+    <div class="faq">
+      <h3>网络或 DeepSeek 服务异常怎么办？</h3>
+      <p>App 不会自动重复上传大图片。遇到网络连接异常、服务繁忙或超时时，请确认网络状况，稍后由您手动点击重新识别。重新识别会再次上传所选报告。</p>
+    </div>
+
+    <div class="faq">
+      <h3>数据存在哪里？</h3>
+      <p>健康档案、指标记录和报告附件主要保存在设备本地。不同人员的档案相互隔离。卸载 App 前请先导出需要保留的数据。</p>
+    </div>
+
+    <div class="faq">
+      <h3>如何备份和恢复？</h3>
+      <ol>
+        <li>打开“设置”。</li>
+        <li>选择“导出数据”，将 <code>.myhealthbackup</code> 文件保存到可信位置。</li>
+        <li>恢复时选择“导入数据”并选择此前的备份文件。</li>
+      </ol>
+      <p>导入会覆盖设备上的现有档案。备份包含结构化健康数据，不包含 API Key、原报告附件或购买凭证。</p>
+    </div>
+
+    <div class="faq">
+      <h3>如何删除数据？</h3>
+      <p>在档案页向右滑动报告记录，可以使用红色废纸篓快捷删除。您也可以在“设置”中使用“清空所有数据”，删除全部人员档案、健康记录、报告附件和已保存的 DeepSeek 配置。导出到 App 之外的文件需要在对应位置另行删除。</p>
+    </div>
+
+    <div class="faq">
+      <h3>换手机后数据会自动同步吗？</h3>
+      <p>不会。健康AI记目前不提供自建云同步。请在旧设备导出备份，再在新设备导入。保存到 iCloud Drive 或其他云盘后的同步由对应系统或云盘服务处理。</p>
+    </div>
+
+    <h2>故障排查</h2>
+    <div class="faq">
+      <h3>App 无响应或意外退出</h3>
+      <ol>
+        <li>从系统多任务界面关闭健康AI记。</li>
+        <li>确认设备有足够的可用存储空间。</li>
+        <li>重新打开 App；如仍无法解决，请通过下方邮箱联系我们。</li>
+      </ol>
+    </div>
+
+    <div class="faq">
+      <h3>相机、相册或文件选择不可用</h3>
+      <p>请在设备系统设置中检查健康AI记的相机和照片权限。文件导入和导出还需要系统文件选择器或兼容的文件服务。</p>
+    </div>
+
+    <h2>联系我们</h2>
+    <p>反馈问题时，建议附上设备型号、系统版本、App 版本、问题出现步骤和错误提示。请不要通过普通邮件发送包含身份证号、完整病历或其他不必要敏感信息的报告原件。</p>
+    <p><strong>支持邮箱：</strong><a href="mailto:zy@fueternal.com">zy@fueternal.com</a></p>
+
+    <h2>系统要求</h2>
+    <ul>
+      <li><strong>iOS：</strong>15.5 或更高版本</li>
+      <li><strong>网络：</strong>仅云端报告识别和应用商店服务需要网络连接</li>
+      <li><strong>存储：</strong>所需空间取决于保存的报告图片、PDF 和档案数量</li>
+    </ul>
+
+    <footer>
+      © 2026 健康AI记开发团队。保留所有权利。<br>
+      <a href="health_ai_note_privacy.html">隐私政策</a>
+    </footer>
+  </main>
+</body>
+</html>

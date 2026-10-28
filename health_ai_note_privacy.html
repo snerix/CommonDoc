@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="健康AI记隐私政策">
+  <title>隐私政策 - 健康AI记</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#167c80; --soft:#e8f4f3; --warn:#fff4da; --border:#d9e2e2; --muted:#667575; }
+    @media (prefers-color-scheme:dark) { :root { --soft:#173231; --warn:#372f19; --border:#334545; --muted:#a5b5b5; } }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif; line-height:1.75; }
+    main { max-width:860px; margin:0 auto; padding:36px 22px 72px; }
+    nav { margin-bottom:24px; }
+    nav a, a { color:var(--accent); }
+    h1 { margin:0 0 4px; font-size:2rem; }
+    h2 { margin-top:40px; padding-bottom:7px; border-bottom:1px solid var(--border); font-size:1.3rem; }
+    h3 { margin-top:25px; font-size:1.08rem; }
+    .meta { color:var(--muted); margin:0 0 24px; }
+    .summary, .notice { padding:16px 18px; border-radius:10px; margin:18px 0; }
+    .summary { background:var(--soft); border-left:4px solid var(--accent); }
+    .notice { background:var(--warn); border-left:4px solid #d89b22; }
+    table { width:100%; border-collapse:collapse; margin:14px 0; }
+    th, td { border:1px solid var(--border); padding:10px 12px; text-align:left; vertical-align:top; }
+    th { background:var(--soft); }
+    code { overflow-wrap:anywhere; }
+    footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--border); color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="index.html">← 返回文档首页</a></nav>
+    <h1>健康AI记隐私政策</h1>
+    <p class="meta">生效日期：2026年11月1日　·　最近更新：2026年11月1日</p>
+
+    <div class="summary">
+      <strong>概要：</strong>健康AI记主要在您的设备本地保存健康指标、化验结果、检查报告和家庭成员档案。我们不运营用于接收报告内容的自建服务器，也不出售您的个人信息。只有当您主动启用并同意云端识别时，您选择的报告页面才会通过 HTTPS 直接发送给 DeepSeek API 处理。
+    </div>
+
+    <p>健康AI记开发团队（以下简称“我们”）重视您的隐私。本政策说明健康AI记（以下简称“本 App”）如何处理信息、使用设备权限，以及您可以如何管理和删除数据。使用本 App 前，请阅读并理解本政策。</p>
+
+    <h2>1. 本 App 的定位</h2>
+    <p>本 App 用于个人和家庭健康数据记录、报告整理、趋势展示和复诊沟通辅助，不提供诊断、医学影像解读、检验或检查结果解释、治疗、用药、停药或急救建议。本 App 只转录化验结果和医生已经出具的文字检查报告，不分析 X 光片、CT/MRI 切片、B 超图像、内镜图像、病理切片或其他原始医学影像。</p>
+
+    <h2>2. 本 App 处理的信息</h2>
+    <table>
+      <thead><tr><th>信息类别</th><th>示例</th><th>主要用途</th></tr></thead>
+      <tbody>
+        <tr><td>人员档案</td><td>档案名称、与使用者的关系</td><td>区分本人及家庭成员的独立健康档案</td></tr>
+        <tr><td>健康与医疗资料</td><td>身体指标、化验结果、参考范围、异常标记、检查所见、检查结论、报告日期、医院名称、备注</td><td>记录、归档、展示趋势和生成就诊摘要</td></tr>
+        <tr><td>报告附件</td><td>用户拍摄或选择的图片、导入的 PDF 及其页面图片</td><td>报告识别、原报告核对和本地归档</td></tr>
+        <tr><td>应用设置</td><td>字体大小、显示模式、关注指标、云端识别授权状态</td><td>保存您的使用偏好</td></tr>
+        <tr><td>DeepSeek 配置</td><td>用户自行填写的 API Key</td><td>由用户自己的 DeepSeek 账户发起报告识别请求</td></tr>
+        <tr><td>购买状态</td><td>家庭档案功能的购买结果</td><td>恢复或确认已购买权益；支付由 Apple 等应用商店处理</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. 本地存储</h2>
+    <ul>
+      <li>结构化健康数据、人员档案、应用设置和报告附件主要保存在本 App 的设备沙盒中。</li>
+      <li>DeepSeek API Key 保存在操作系统提供的安全存储中，不写入健康数据备份。</li>
+      <li>本 App 不要求注册健康AI记账户，也不提供自建云同步服务。</li>
+      <li>卸载 App 通常会删除 App 沙盒内的数据；但您主动导出到“文件”、iCloud Drive、第三方云盘或其他位置的副本不受卸载影响。</li>
+    </ul>
+
+    <h2>4. DeepSeek 云端识别</h2>
+    <p>云端识别是可选功能。首次使用前，本 App 会明确说明数据将发送给 DeepSeek，并征求您的同意。您可以在设置中关闭云端识别。</p>
+    <h3>发送内容</h3>
+    <ul>
+      <li>您主动选择用于识别的报告照片；</li>
+      <li>PDF 在本机转换生成的页面图片；</li>
+      <li>用于限定“只转录文字、不进行诊断或医学影像分析”的处理指令；</li>
+      <li>请求过程中由网络服务通常产生的网络与技术信息，例如 IP 地址、设备或请求日志，具体以 DeepSeek 的规则为准。</li>
+    </ul>
+    <h3>处理方式</h3>
+    <ul>
+      <li>请求通过 HTTPS 直接提交给 DeepSeek API；健康AI记没有自建图片中转服务器。</li>
+      <li>API Key 由用户自行提供，相关费用、账户记录和配额由该 DeepSeek 账户承担。</li>
+      <li>DeepSeek 对输入内容、输出内容、日志和网络信息的处理、保存期限、跨境存储及用户权利，受 DeepSeek 的政策、开放平台条款和账户设置约束。</li>
+    </ul>
+    <div class="notice"><strong>敏感信息提示：</strong>医疗报告可能包含姓名、年龄、医院、检查结果等敏感个人信息。请仅处理您本人或已获得合法授权的资料，并在发送前确认报告中包含的信息。</div>
+    <p>第三方链接：</p>
+    <ul>
+      <li><a href="https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html" rel="noopener noreferrer">DeepSeek Privacy Policy</a></li>
+      <li><a href="https://cdn.deepseek.com/policies/en-US/deepseek-open-platform-terms-of-service.html" rel="noopener noreferrer">DeepSeek Open Platform Terms of Service</a></li>
+    </ul>
+
+    <h2>5. 设备权限</h2>
+    <ul>
+      <li><strong>相机：</strong>用于拍摄纸质报告或家用仪器屏幕。只有您主动拍摄时才会使用。</li>
+      <li><strong>照片与文件：</strong>用于选择报告图片、导入 PDF、导入或导出备份，以及保存就诊摘要。</li>
+      <li><strong>网络：</strong>用于在您同意后访问 DeepSeek API，以及完成应用商店购买验证等系统服务。</li>
+    </ul>
+    <p>您可以在设备系统设置中管理权限。拒绝相机或照片权限不会影响手动录入，但相应的拍摄或选择功能将不可用。</p>
+
+    <h2>6. 数据备份与导出</h2>
+    <ul>
+      <li>您可以导出 <code>.myhealthbackup</code> 备份文件。备份包含人员档案和结构化健康数据，不包含 DeepSeek API Key、原报告附件或购买凭证。</li>
+      <li>您可以生成就诊摘要 PDF，并通过系统分享功能保存或发送。</li>
+      <li>备份文件、PDF 或其他导出内容一旦离开本 App，将由您选择的文件位置、云盘、通信工具或接收者处理。请自行选择可信目的地并妥善保管。</li>
+    </ul>
+
+    <h2>7. 信息共享与披露</h2>
+    <p>我们不出售或出租您的健康数据。除以下情形外，本 App 不会主动向第三方提供您的数据：</p>
+    <ul>
+      <li>您明确选择并同意使用 DeepSeek 云端识别；</li>
+      <li>您主动导出、分享或备份数据；</li>
+      <li>Apple 或其他应用商店为处理购买、退款和恢复购买而处理交易信息；</li>
+      <li>法律法规要求，或为保护用户及他人生命、财产与合法权益所必需的情形。</li>
+    </ul>
+
+    <h2>8. 数据保留、删除与您的选择</h2>
+    <ul>
+      <li>本地数据通常保留至您删除对应记录、使用“清空所有数据”或卸载 App。</li>
+      <li>您可以删除单份化验报告、检查报告或具体指标记录。</li>
+      <li>您可以在设置中清空全部人员档案、健康记录、报告附件和已保存的 DeepSeek 配置。</li>
+      <li>您导出到本 App 之外的文件需要由您在对应位置另行删除。</li>
+      <li>已经发送给 DeepSeek 的内容及相关请求日志，应依据 DeepSeek 提供的账户设置和隐私权利渠道进行管理。</li>
+    </ul>
+
+    <h2>9. 家庭成员与未成年人资料</h2>
+    <p>本 App 支持为家庭成员建立相互独立的档案。录入、拍摄或上传他人资料前，您应确认自己有权处理该资料，并在适用情况下取得本人、监护人或其他合法授权人的同意。监护人应负责未成年人资料的录入和管理。</p>
+
+    <h2>10. 数据安全与准确性</h2>
+    <p>我们采用设备沙盒、系统安全存储和 HTTPS 等措施降低未经授权访问的风险。但任何存储或网络传输方式都无法保证绝对安全。OCR 和生成式 AI 可能识别错误、遗漏或混淆内容，请在保存前逐项对照原始报告核对，且不要依据本 App 的识别结果自行作出医疗决定。</p>
+
+    <h2>11. 隐私政策网页的托管</h2>
+    <p>本政策网页通过 GitHub Pages 提供。访问网页时，GitHub 可能为安全、运行和日志目的处理 IP 地址等网络信息。相关处理适用 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub General Privacy Statement</a>。本页面自身不使用广告、分析脚本或第三方字体。</p>
+
+    <h2>12. 政策更新</h2>
+    <p>我们可能因功能、第三方服务或法律要求变化而更新本政策。更新后的政策会在本页面发布并注明最新日期。若更新对您的权利产生重大影响，我们会通过适当方式提示。</p>
+
+    <h2>13. 联系我们</h2>
+    <p>如对本政策、个人信息处理或删除方式有疑问，请联系：</p>
+    <p><strong>电子邮箱：</strong><a href="mailto:zy@fueternal.com">zy@fueternal.com</a></p>
+
+    <footer>
+      © 2026 健康AI记开发团队。保留所有权利。<br>
+      <a href="health_ai_note_support.html">技术支持</a>
+    </footer>
+  </main>
+</body>
+</html>

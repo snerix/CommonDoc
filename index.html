@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>CommonDoc - App 文档</title>
+  <style>
+    :root { color-scheme: light dark; --accent:#167c80; --card:#f4f7f7; --border:#d9e2e2; }
+    @media (prefers-color-scheme: dark) { :root { --card:#172323; --border:#334545; } }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif; line-height:1.7; }
+    main { max-width:820px; margin:0 auto; padding:48px 22px 72px; }
+    h1 { margin:0 0 8px; font-size:2rem; }
+    .lead { margin:0 0 32px; opacity:.72; }
+    .card { display:block; color:inherit; text-decoration:none; border:1px solid var(--border); background:var(--card); border-radius:16px; padding:22px; margin:14px 0; }
+    .card:hover { border-color:var(--accent); }
+    .card h2 { margin:0 0 6px; color:var(--accent); }
+    .card p { margin:0; opacity:.78; }
+    footer { margin-top:54px; padding-top:20px; border-top:1px solid var(--border); opacity:.68; font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>CommonDoc</h1>
+    <p class="lead">FUEternal 应用的隐私政策与技术支持文档。</p>
+    <a class="card" href="health_ai_note_privacy.html">
+      <h2>健康AI记 · 隐私政策</h2>
+      <p>了解健康数据、本地存储、DeepSeek 云端识别、备份与删除规则。</p>
+    </a>
+    <a class="card" href="health_ai_note_support.html">
+      <h2>健康AI记 · 技术支持</h2>
+      <p>查看常见问题、报告识别说明、数据备份方法和联系方式。</p>
+    </a>
+    <footer>© 2026 FUEternal. All rights reserved.</footer>
+  </main>
+</body>
+</html>
